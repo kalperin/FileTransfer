@@ -322,12 +322,14 @@ public class FileTransferComponentTest extends AndroidTestCase
 
 	public void testGetFileID() throws Exception
 	{
-        receivingFtComponent.initialize(receivingBus, sessionId);
-        sendingFtComponent.initialize(sendingBus, sessionId);
-
-        ArrayList<String> pathList = new ArrayList<String>();
+		ArrayList<String> pathList = new ArrayList<String>();
 		pathList.add(testFile.getAbsolutePath());		
 		sendingFtComponent.announce(pathList);
+		
+		Thread.sleep(500); //allow time to generate announcement
+		
+		receivingFtComponent.initialize(receivingBus, sessionId);
+        sendingFtComponent.initialize(sendingBus, sessionId);        
 		
 		Thread.sleep(500); //allow announcement to be received
 		
@@ -340,13 +342,15 @@ public class FileTransferComponentTest extends AndroidTestCase
 	}
 
 	public void testGetAvailableRemoteFiles() throws Exception
-	{
-        receivingFtComponent.initialize(receivingBus, sessionId);
-        sendingFtComponent.initialize(sendingBus, sessionId);
-        
+	{        
 		ArrayList<String> pathList = new ArrayList<String>();
 		pathList.add(testFile.getAbsolutePath());		
 		sendingFtComponent.announce(pathList);	
+		
+		Thread.sleep(500); //allow time to generate announcement
+		
+		receivingFtComponent.initialize(receivingBus, sessionId);
+        sendingFtComponent.initialize(sendingBus, sessionId);
 		
 		Thread.sleep(500); //allow announcement to be received
 		
