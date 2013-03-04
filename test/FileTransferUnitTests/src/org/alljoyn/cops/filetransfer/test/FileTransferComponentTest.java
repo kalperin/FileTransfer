@@ -322,13 +322,12 @@ public class FileTransferComponentTest extends AndroidTestCase
 
 	public void testGetFileID() throws Exception
 	{
-		ArrayList<String> pathList = new ArrayList<String>();
+        receivingFtComponent.initialize(receivingBus, sessionId);
+        sendingFtComponent.initialize(sendingBus, sessionId);
+
+        ArrayList<String> pathList = new ArrayList<String>();
 		pathList.add(testFile.getAbsolutePath());		
-		sendingFtComponent.announce(pathList);	
-		Thread.sleep(100); //allow the announcement to be generated		
-		
-		receivingFtComponent.initialize(receivingBus, sessionId);
-		sendingFtComponent.initialize(sendingBus, sessionId);
+		sendingFtComponent.announce(pathList);
 		
 		Thread.sleep(500); //allow announcement to be received
 		
@@ -342,13 +341,12 @@ public class FileTransferComponentTest extends AndroidTestCase
 
 	public void testGetAvailableRemoteFiles() throws Exception
 	{
+        receivingFtComponent.initialize(receivingBus, sessionId);
+        sendingFtComponent.initialize(sendingBus, sessionId);
+        
 		ArrayList<String> pathList = new ArrayList<String>();
 		pathList.add(testFile.getAbsolutePath());		
 		sendingFtComponent.announce(pathList);	
-		Thread.sleep(100); //allow the announcement to be generated		
-		
-		receivingFtComponent.initialize(receivingBus, sessionId);
-		sendingFtComponent.initialize(sendingBus, sessionId);
 		
 		Thread.sleep(500); //allow announcement to be received
 		
@@ -398,7 +396,7 @@ public class FileTransferComponentTest extends AndroidTestCase
 		pathList.add(testFile.getAbsolutePath());		
 		sendingFtComponent.announce(pathList);	
 		
-		Thread.sleep(100); //allow the announcement to be generated	
+		Thread.sleep(500); //allow the announcement to be generated	
 		FileDescriptor descriptor = sendingFtComponent.getAnnouncedLocalFiles().get(0);
 		
 		status = receivingFtComponent.requestFile(sendingBus.getUniqueName(), descriptor.fileID, descriptor.filename);
@@ -468,7 +466,7 @@ public class FileTransferComponentTest extends AndroidTestCase
 		pathList.add(testFile.getAbsolutePath());		
 		sendingFtComponent.announce(pathList);	
 		
-		Thread.sleep(100); //allow the announcement to be generated	
+		Thread.sleep(500); //allow the announcement to be generated	
 		FileDescriptor descriptor = sendingFtComponent.getAnnouncedLocalFiles().get(0);
 		
 		receivingFtComponent.setChunkSize(1);
