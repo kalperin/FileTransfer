@@ -37,11 +37,17 @@ public class ReceiveManagerTest extends AndroidTestCase
 	
 	public void testSetDefaultSaveDirectory()
 	{
-		String validDir = "valid";
-		String invalidDir = "invalid";
+		File testDir = new File(getContext().getFilesDir().getAbsolutePath());		
+		if (testDir.exists())
+		{
+			testDir.delete();
+		}
 		
-		assertEquals(StatusCode.OK, receiveManager.setDefaultSaveDirectory(validDir));
-		assertEquals(StatusCode.BAD_FILE_PATH, receiveManager.setDefaultSaveDirectory(invalidDir));
+		assertEquals(StatusCode.BAD_FILE_PATH, receiveManager.setDefaultSaveDirectory("not a vaild path"));
+		
+		assertEquals(StatusCode.OK, receiveManager.setDefaultSaveDirectory(testDir.getAbsolutePath()));
+		
+		testDir.delete();
 	}
 	
 	public void testSettingChunkSize()

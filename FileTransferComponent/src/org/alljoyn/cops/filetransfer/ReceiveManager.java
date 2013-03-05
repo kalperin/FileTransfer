@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright 2012 - 2013, Qualcomm Innovation Center, Inc.
+  * Copyright 2012 - 2013, Qualcomm Innovation Center, Inc.
 *
 *    Licensed under the Apache License, Version 2.0 (the "License");
 *    you may not use this file except in compliance with the License.
@@ -90,10 +90,11 @@ public class ReceiveManager implements ReceiveManagerListener
 		
 		fileStatuses = new HashMap<String, FileStatus>();
 		maxChunkSize = 1024;
-		defaultSaveDirectory = "/mnt/sdcard/download";
 		
 		completedListenerLock = new Object();
 		savePathLock = new Object();
+		
+		setDefaultSaveDirectory("/mnt/sdcard/download");
 	}
 	
 	/*------------------------------------------------------------------------*
@@ -111,15 +112,24 @@ public class ReceiveManager implements ReceiveManagerListener
 	 */
 	public int setDefaultSaveDirectory(String directory)
 	{
-		if (fsa.isValid(directory))
+		File file = new File(directory);
+		
+		if (!file.exists())
 		{
-			synchronized(savePathLock)
+			boolean success = file.mkdirs();
+			
+			if (!success)
 			{
-				defaultSaveDirectory = directory;
-			}			
-			return StatusCode.OK;
-		}		
-		return StatusCode.BAD_FILE_PATH;
+				return StatusCode.BAD_FILE_PATH;
+			}
+		}
+		
+		synchronized(savePathLock)
+		{
+			defaultSaveDirectory = directory;
+		}			
+		
+		return StatusCode.OK;
 	}
 
 	/** 
