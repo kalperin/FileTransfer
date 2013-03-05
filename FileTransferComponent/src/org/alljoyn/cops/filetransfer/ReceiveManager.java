@@ -116,7 +116,7 @@ public class ReceiveManager implements ReceiveManagerListener
 		
 		if (!file.exists())
 		{
-			boolean success = file.mkdir();
+			boolean success = file.mkdirs();
 			
 			if (!success)
 			{
