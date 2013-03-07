@@ -91,6 +91,13 @@ public class Receiver
 			SendManagerListener smListener, ReceiveManagerListener rmListener,
 			DirectedAnnouncementManagerListener damListener)
 	{
+	    // if the bus object is getting changed, we have to remove ourselves
+	    // from the previous bus to prevent signals from coming in on it.
+	    if (this.bus != null)
+	    {
+	        this.bus.unregisterSignalHandlers(this);
+	    }
+	    
 		this.bus = bus;
 		this.announcementManagerListener = amListener;
 		this.sendManagerListener = smListener;
