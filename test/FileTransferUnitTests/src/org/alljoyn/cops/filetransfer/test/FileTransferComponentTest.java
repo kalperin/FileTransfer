@@ -146,6 +146,9 @@ public class FileTransferComponentTest extends AndroidTestCase
 		
 		receivingBus.release();
 		sendingBus.release();
+		
+        sendingFtComponent.destroy();
+        receivingFtComponent.destroy();
 	}
 
 	public void testAnnounce() throws Exception

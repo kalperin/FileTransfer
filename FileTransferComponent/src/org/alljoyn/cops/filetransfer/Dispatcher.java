@@ -98,15 +98,21 @@ public class Dispatcher implements Runnable
 	@Override
 	public void run()
 	{
-		try
+	    boolean isRunning = true;
+	    
+		while (isRunning)
 		{
-			while (true)
-			{
+	        try
+	        {
 				Action action = dispatcherQueue.take();
 				
 				if (action.actionType == ActionType.FILE_ID_RESPONSE)
 				{
 					directedAnnouncementManagerListener.generateFileDescriptor(action);
+				}
+				else if (action.actionType == ActionType.SHUTDOWN_THREAD)
+				{
+				    isRunning = false;
 				}
 				else
 				{
@@ -117,11 +123,11 @@ public class Dispatcher implements Runnable
 						sendManagerListener.dataSent();
 					}
 				}
-			}
-		}
-		catch (Exception ex)
-		{
-			Logger.log(ex.toString());			
+	        }
+	        catch (Exception ex)
+	        {
+	            Logger.log(ex.toString());          
+	        }
 		}
 	}
 	

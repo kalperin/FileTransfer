@@ -679,6 +679,7 @@ public class FileTransferSampleAppActivity extends Activity implements Connectio
 	@Override
     public void onBackPressed() 
     {
+	    ftComponent.destroy();
     	ajManager.disconnect();  	
     	super.onBackPressed();
     }	
