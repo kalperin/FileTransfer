@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import org.alljoyn.bus.BusAttachment;
 import org.alljoyn.cops.filetransfer.alljoyn.FileTransferBusObject;
 import org.alljoyn.cops.filetransfer.data.*;
+import org.alljoyn.cops.filetransfer.data.Action.ActionType;
 import org.alljoyn.cops.filetransfer.listener.*;
 
 /**
@@ -167,6 +168,31 @@ public class FileTransferComponent
 	public void uninitialize()
 	{
 		initialize(null, 0);
+	}
+	
+    /**
+     * destroy()
+     * cleans up resources used by an instance of the File Transfer Component (FTC). It is
+     * an error to make any further calls on this instance of the FTC after this call has 
+     * been made.
+     */
+	public void destroy()
+	{
+	    Action shutdownThreadAction = new Action();
+	    shutdownThreadAction.actionType = ActionType.SHUTDOWN_THREAD;
+	    
+	    dispatcher.insertAction(shutdownThreadAction);
+	    
+        dispatcher = null;
+        announcementManager = null;
+        sendManager = null;
+        receiveManager = null;
+        busObject = null;
+        permissionsManager = null;
+        directedAnnouncementManager = null;
+        offerManager = null;
+        receiver = null;
+        fileSystemAbstraction = null;
 	}
 	
 	/**

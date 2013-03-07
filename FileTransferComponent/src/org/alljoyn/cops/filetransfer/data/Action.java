@@ -48,7 +48,8 @@ public class Action
 		OFFER_FILE,
 		STOP_XFER,
 		XFER_CANCELLED,
-		FILE_ID_RESPONSE
+		FILE_ID_RESPONSE,
+		SHUTDOWN_THREAD
 	}; 
 	
 	// Member Variables
