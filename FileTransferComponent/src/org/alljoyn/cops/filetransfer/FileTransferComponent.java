@@ -123,7 +123,7 @@ public class FileTransferComponent
 	 * File Transfer Component (FTC) by providing a new ALlJoyn Bus Attachment and session
 	 * ID. This allows some tremendous flexibility by allowing the user to have more than 
 	 * a single instance of the FTC and manage multiple AllJoyn sessions. This concept of
-	 * dynamic sessions will also all the user to utilize most of the core FTC operations
+	 * dynamic sessions will also allow the user to utilize most of the core FTC operations
 	 * without specifying an AllJoyn session.  
 	 * <p>
 	 * Note: if there are existing announced files, an announcement will be sent to all session
@@ -172,9 +172,10 @@ public class FileTransferComponent
 	
     /**
      * destroy()
-     * cleans up resources used by an instance of the File Transfer Component (FTC). It is
-     * an error to make any further calls on this instance of the FTC after this call has 
-     * been made.
+     * is called to clean up all resources used by an instance of the File Transfer Component
+     * (FTC). This function will terminate the dispatcher thread and destroy all references to
+     * the modules used by the FTC. Therefore, any subsequent calls to the FTC after this
+     * function has been called, will result in a null pointer exception being thrown.
      */
 	public void destroy()
 	{
