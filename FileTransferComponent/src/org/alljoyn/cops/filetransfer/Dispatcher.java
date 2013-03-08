@@ -90,10 +90,12 @@ public class Dispatcher implements Runnable
 	 * thread. This function runs in an infinite loop and waits until an action is inserted
 	 * into the queue. When an action is inserted the appropriate action is taken based on
 	 * the action type. Most actions are simply passed to the transmitter for servicing 
-	 * except two. The FILE_ID_RESPONSE action calls back to the DirectedAnnouncement
+	 * except three. The FILE_ID_RESPONSE action calls back to the DirectedAnnouncement
 	 * Manager so a file descriptor can be generated and sent as an announcement. And the 
 	 * DATA_CHUNK action calls back to the SendManager so the next chunk of the file 
-	 * can be inserted for transmission.
+	 * can be inserted for transmission. And lastly, the SHUTDOWN_THREAD action is used
+	 * only for unit testing and provides a cleanup mechanism to ensure all dispatcher
+	 * threads can be terminated.
 	 */
 	@Override
 	public void run()
