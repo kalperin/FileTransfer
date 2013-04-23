@@ -246,7 +246,7 @@ public class FileTransferModule
 	 * will return NO_FILE_ANNOUNCEMENT_LISTENER if the user had failed to set a 
 	 * FileAnnouncementListener. Otherwise, the function will return OK. 
 	 * <p>
-     * Note: a FileAnnouncementListener must be set using {@link #setAnnouncementListener} 
+     * Note: a FileAnnouncementReceivedListener must be set using {@link #setFileAnnouncementReceivedListener} 
      * in order for you to call this method. This is mandatory because you will not know 
      * when a peer answers your announcement request if you have not registered this listener.
 	 * 
@@ -270,7 +270,7 @@ public class FileTransferModule
 	 * for the requested file should arrive shortly. Otherwise, the transfer request will
 	 * be denied.  
 	 * <p>
-	 * Note: The UnannouncedFileRequestListener can be set using {@link #setUnannouncedFileListener}
+	 * Note: The UnannouncedFileRequestListener can be set using {@link #setUnannouncedFileRequestListener}
 	 * method and is mandatory if you wish to allow sessions peers to request files that have not
 	 * been announced or shared.
 	 * 

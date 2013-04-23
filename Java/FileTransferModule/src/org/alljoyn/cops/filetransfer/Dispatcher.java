@@ -72,7 +72,7 @@ public class Dispatcher implements Runnable
 	 * Note: this secondary constructor is used for testing purposes only when we need to specify
 	 * a separate instance of the Transmitter.
 	 * 
-	 * @param Transmitter  instance of the Transmitter Module
+	 * @param transmitter  instance of the Transmitter Module
 	 */
 	public Dispatcher(Transmitter transmitter)
 	{
@@ -204,7 +204,7 @@ public class Dispatcher implements Runnable
 	 * 
 	 * @param busObject  instance of File Transfer Bus Object
 	 * @param busAttachment  instance of AllJoyn Bus Attachment, can be null
-	 * @param localBusID  specifies the bus ID of the bus attachment, can be null
+	 * @param sessionID  specifies the bus ID of the bus attachment, can be null
 	 */
 	public void resetState(FileTransferBusObject busObject,
 			BusAttachment busAttachment, int sessionID)

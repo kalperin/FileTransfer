@@ -272,7 +272,7 @@ public class SendManager implements SendManagerListener
 	 * @param startByte  specifies the starting position for the file data
 	 * @param length  specifies the length of the file
 	 * @param peer  specifies the recipient of the file
-	 * @param chunkLength  specifies the length of each file chunk
+	 * @param maxChunkLength  specifies the length of each file chunk
 	 */
 	@Override
 	public int sendFile(byte[] fileID, int startByte, int length, String peer,

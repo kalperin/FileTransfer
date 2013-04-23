@@ -378,7 +378,7 @@ public class PermissionsManager
 	 * provided file ID and peer parameters. If a match is not found, this function will
 	 * return null. 
 	 * 
-	 * @param fileId  specifies the ID of the file being requested
+	 * @param fileID  specifies the ID of the file being requested
 	 * @param peer  specifies the owner of the file
 	 * @return file descriptor matching the file ID, null otherwise
 	 */
@@ -433,13 +433,13 @@ public class PermissionsManager
 	 * 
 	 * @param localBusID  specifies the bus ID of the bus attachment, can be null.
 	 */
-	public void resetState(String localBusId)
+	public void resetState(String localBusID)
 	{
 		synchronized(announcedLocalFilesList)
 		{
 			for (FileDescriptor descriptor : announcedLocalFilesList.values())
 			{
-				descriptor.owner = localBusId;
+				descriptor.owner = localBusID;
 			}
 		}
 		
@@ -447,7 +447,7 @@ public class PermissionsManager
 		{
 			for (FileDescriptor descriptor : offeredLocalFilesList.values())
 			{
-				descriptor.owner = localBusId;
+				descriptor.owner = localBusID;
 			}
 		}
 	}
