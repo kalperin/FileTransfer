@@ -312,6 +312,14 @@ public class FileTransferSampleAppActivity extends Activity implements Connectio
 			handler.sendMessage(handler.obtainMessage(ENABLE_VIEW, requestButton));
 			handler.sendMessage(handler.obtainMessage(ENABLE_VIEW, offerButton));
 			handler.sendMessage(handler.obtainMessage(ENABLE_VIEW, requestByPathButton));
+
+            new Thread()
+            {
+                public void run()
+                {
+                    initializeFileTransferModule();     
+                }
+            }.start();                      
 		}
 	}
     
@@ -326,8 +334,6 @@ public class FileTransferSampleAppActivity extends Activity implements Connectio
 		handler.sendMessage(handler.obtainMessage(TOAST, "Hosting session"));	
 		
 		ajManager.createSession();
-		
-		initializeFileTransferModule();		
 	}
 	
 	/*
@@ -342,8 +348,6 @@ public class FileTransferSampleAppActivity extends Activity implements Connectio
 		handler.sendMessage(handler.obtainMessage(TOAST, "Attempting to join session..."));		
 		
 		ajManager.joinSession();	
-		
-		initializeFileTransferModule();
 	}
 
 	/*
