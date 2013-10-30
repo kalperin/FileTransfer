@@ -81,7 +81,7 @@
 		870C161616FBD0C400C6F537 /* FTMMockTransmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 870C161516FBD0C400C6F537 /* FTMMockTransmitter.m */; };
 		8760A52C16E10CC400608DFB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8760A52B16E10CC400608DFB /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		8760A53016E1170400608DFB /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8760A52F16E1170400608DFB /* libstdc++.6.0.9.dylib */; };
-		B828231416EEC7EA0062FEBC /* libAllJoynFramework_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B828230F16EEC7D70062FEBC /* libAllJoynFramework_iOS.a */; };
+		A974B4BD17E026D20046391A /* libAllJoynFramework_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A974B4B817E026A10046391A /* libAllJoynFramework_iOS.a */; };
 		B82A5AFE16F3891E0017499B /* FTMMessageUtility.mm in Sources */ = {isa = PBXBuildFile; fileRef = B82A5AFD16F3891E0017499B /* FTMMessageUtility.mm */; };
 		B8B4065916E6A218007D2138 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B4065616E6A1AF007D2138 /* libcrypto.a */; };
 /* End PBXBuildFile section */
@@ -101,23 +101,23 @@
 			remoteGlobalIDString = 7EFC976016C1ADE00011DD4A;
 			remoteInfo = FileTransferModule;
 		};
-		B828230E16EEC7D70062FEBC /* PBXContainerItemProxy */ = {
+		A974B4B717E026A10046391A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8120CE516EEC77B00A4FF0A /* AllJoynFramework_iOS.xcodeproj */;
+			containerPortal = A974B4B117E026A10046391A /* AllJoynFramework_iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = AC1030A8156EC82300D2853A;
 			remoteInfo = AllJoynFramework_iOS;
 		};
-		B828231016EEC7D70062FEBC /* PBXContainerItemProxy */ = {
+		A974B4B917E026A10046391A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8120CE516EEC77B00A4FF0A /* AllJoynFramework_iOS.xcodeproj */;
+			containerPortal = A974B4B117E026A10046391A /* AllJoynFramework_iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = AC1030B8156EC82300D2853A;
 			remoteInfo = AllJoynFramework_iOSTests;
 		};
-		B828231216EEC7E30062FEBC /* PBXContainerItemProxy */ = {
+		A974B4BB17E026B90046391A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B8120CE516EEC77B00A4FF0A /* AllJoynFramework_iOS.xcodeproj */;
+			containerPortal = A974B4B117E026A10046391A /* AllJoynFramework_iOS.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = AC1030A7156EC82300D2853A;
 			remoteInfo = AllJoynFramework_iOS;
@@ -252,7 +252,7 @@
 		87B2B09D16DD5534006A7EC5 /* FTMRequestDataReceivedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTMRequestDataReceivedDelegate.h; sourceTree = "<group>"; };
 		87B2B09E16DD55C1006A7EC5 /* FTMSendManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTMSendManagerDelegate.h; sourceTree = "<group>"; };
 		87B2B09F16DD56AC006A7EC5 /* FTMUnannouncedFileRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTMUnannouncedFileRequestDelegate.h; sourceTree = "<group>"; };
-		B8120CE516EEC77B00A4FF0A /* AllJoynFramework_iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AllJoynFramework_iOS.xcodeproj; path = alljoyn_objc/AllJoynFramework_iOS/AllJoynFramework_iOS.xcodeproj; sourceTree = ALLJOYN_HOME; };
+		A974B4B117E026A10046391A /* AllJoynFramework_iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AllJoynFramework_iOS.xcodeproj; path = ../../../alljoyn_objc/AllJoynFramework_iOS/AllJoynFramework_iOS.xcodeproj; sourceTree = "<group>"; };
 		B82A5AFC16F3891E0017499B /* FTMMessageUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTMMessageUtility.h; sourceTree = "<group>"; };
 		B82A5AFD16F3891E0017499B /* FTMMessageUtility.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FTMMessageUtility.mm; sourceTree = "<group>"; };
 		B8466AC816E69E0A00A89C4D /* openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = openssl.xcodeproj; sourceTree = OPENSSL_PROJ; };
@@ -263,7 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B828231416EEC7EA0062FEBC /* libAllJoynFramework_iOS.a in Frameworks */,
+				A974B4BD17E026D20046391A /* libAllJoynFramework_iOS.a in Frameworks */,
 				B8B4065916E6A218007D2138 /* libcrypto.a in Frameworks */,
 				8760A53016E1170400608DFB /* libstdc++.6.0.9.dylib in Frameworks */,
 				8760A52C16E10CC400608DFB /* SystemConfiguration.framework in Frameworks */,
@@ -316,7 +316,7 @@
 		7EFC975816C1ADE00011DD4A = {
 			isa = PBXGroup;
 			children = (
-				B8120CE516EEC77B00A4FF0A /* AllJoynFramework_iOS.xcodeproj */,
+				A974B4B117E026A10046391A /* AllJoynFramework_iOS.xcodeproj */,
 				B8466AC816E69E0A00A89C4D /* openssl.xcodeproj */,
 				7EFC976616C1ADE00011DD4A /* FileTransferModule */,
 				7EFC977B16C1ADE00011DD4A /* FileTransferModuleTests */,
@@ -485,11 +485,11 @@
 			name = FileTransfer;
 			sourceTree = "<group>";
 		};
-		B828230916EEC7D70062FEBC /* Products */ = {
+		A974B4B217E026A10046391A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B828230F16EEC7D70062FEBC /* libAllJoynFramework_iOS.a */,
-				B828231116EEC7D70062FEBC /* AllJoynFramework_iOSTests.octest */,
+				A974B4B817E026A10046391A /* libAllJoynFramework_iOS.a */,
+				A974B4BA17E026A10046391A /* AllJoynFramework_iOSTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -516,7 +516,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B828231316EEC7E30062FEBC /* PBXTargetDependency */,
+				A974B4BC17E026B90046391A /* PBXTargetDependency */,
 				B8B4065816E6A214007D2138 /* PBXTargetDependency */,
 			);
 			name = FileTransferModule;
@@ -565,8 +565,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B828230916EEC7D70062FEBC /* Products */;
-					ProjectRef = B8120CE516EEC77B00A4FF0A /* AllJoynFramework_iOS.xcodeproj */;
+					ProductGroup = A974B4B217E026A10046391A /* Products */;
+					ProjectRef = A974B4B117E026A10046391A /* AllJoynFramework_iOS.xcodeproj */;
 				},
 				{
 					ProductGroup = B8B4065016E6A1AF007D2138 /* Products */;
@@ -583,18 +583,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B828230F16EEC7D70062FEBC /* libAllJoynFramework_iOS.a */ = {
+		A974B4B817E026A10046391A /* libAllJoynFramework_iOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libAllJoynFramework_iOS.a;
-			remoteRef = B828230E16EEC7D70062FEBC /* PBXContainerItemProxy */;
+			remoteRef = A974B4B717E026A10046391A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B828231116EEC7D70062FEBC /* AllJoynFramework_iOSTests.octest */ = {
+		A974B4BA17E026A10046391A /* AllJoynFramework_iOSTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = AllJoynFramework_iOSTests.octest;
-			remoteRef = B828231016EEC7D70062FEBC /* PBXContainerItemProxy */;
+			remoteRef = A974B4B917E026A10046391A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		B8B4065616E6A1AF007D2138 /* libcrypto.a */ = {
@@ -724,10 +724,10 @@
 			target = 7EFC976016C1ADE00011DD4A /* FileTransferModule */;
 			targetProxy = 7EFC977816C1ADE00011DD4A /* PBXContainerItemProxy */;
 		};
-		B828231316EEC7E30062FEBC /* PBXTargetDependency */ = {
+		A974B4BC17E026B90046391A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AllJoynFramework_iOS;
-			targetProxy = B828231216EEC7E30062FEBC /* PBXContainerItemProxy */;
+			targetProxy = A974B4BB17E026B90046391A /* PBXContainerItemProxy */;
 		};
 		B8B4065816E6A214007D2138 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -804,10 +804,8 @@
 		7EFC978716C1ADE00011DD4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_BIT)",
-					armv7,
-				);
+				ALLJOYN_HOME = "$(SRCROOT)/../../..";
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/FileTransferModule.dst;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -831,8 +829,11 @@
 					"\"$(ALLJOYN_HOME)/alljoyn_core/build/darwin/arm/iphonesimulator/$(CONFIGURATION)/dist/lib\"",
 					"\"$(ALLJOYN_HOME)/alljoyn_core/build/darwin/$(CURRENT_ARCH)/$(PLATFORM_NAME)/$(CONFIGURATION)/dist/cpp/lib\"",
 					"\"$(ALLJOYN_HOME)/alljoyn_core/build/darwin/arm/iphonesimulator/$(CONFIGURATION)/dist/cpp/lib\"",
+					"$(OPENSSL_ROOT)/build/$(CONFIGURATION)-$(PLATFORM_NAME)-$(CURRENT_ARCH)",
+					"$(OPENSSL_ROOT)/build/$(CONFIGURATION)-$(PLATFORM_NAME)",
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OPENSSL_ROOT = "$(ALLJOYN_HOME)/openssl";
 				OTHER_CFLAGS = (
 					"-DQCC_OS_GROUP_POSIX",
 					"-DQCC_OS_DARWIN",
@@ -845,10 +846,8 @@
 		7EFC978816C1ADE00011DD4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_BIT)",
-					armv7,
-				);
+				ALLJOYN_HOME = "$(SRCROOT)/../../..";
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/FileTransferModule.dst;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -872,8 +871,11 @@
 					"\"$(ALLJOYN_HOME)/alljoyn_core/build/darwin/arm/iphonesimulator/$(CONFIGURATION)/dist/lib\"",
 					"\"$(ALLJOYN_HOME)/alljoyn_core/build/darwin/$(CURRENT_ARCH)/$(PLATFORM_NAME)/$(CONFIGURATION)/dist/cpp/lib\"",
 					"\"$(ALLJOYN_HOME)/alljoyn_core/build/darwin/arm/iphonesimulator/$(CONFIGURATION)/dist/cpp/lib\"",
+					"$(OPENSSL_ROOT)/build/$(CONFIGURATION)-$(PLATFORM_NAME)-$(CURRENT_ARCH)",
+					"$(OPENSSL_ROOT)/build/$(CONFIGURATION)-$(PLATFORM_NAME)",
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OPENSSL_ROOT = "$(ALLJOYN_HOME)/openssl";
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DQCC_OS_GROUP_POSIX",
